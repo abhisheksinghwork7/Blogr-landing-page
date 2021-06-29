@@ -1,0 +1,320 @@
+@import "variables"
+@import "fontStyling"
+
+*,* *
+    margin: 0
+    padding: 0
+    text-decoration: none
+
+body
+.container
+    width: 100%
+
+.intro-background
+    background: url('../images/bg-pattern-intro.svg') no-repeat center top,
+    linear-gradient(to bottom,$intro-cta-gradient-1,$intro-cta-gradient-2)
+    background-size: 315vw
+    background-position: 34% 30%
+    width: 100%
+    height: 37.1875rem
+    border-radius: 0 0 0 60px
+nav
+    position: relative
+    .nav_logo
+        float: left
+        margin: 1.78125rem 0 0
+    .nav-bars-btn
+        float: right
+        margin: 1.78125rem 0 0
+        .bar1, .bar2, .bar3
+            width: 34px
+            height: 4px
+            background-color: white
+            margin: 7px 24px 7px 0px
+            transition: 0.4s
+    .change .bar1
+        transform: rotate(-45deg) translate(-9px, 6px)
+    .change .bar2
+        opacity: 0
+    .change .bar3
+        transform: rotate(45deg) translate(-8px, -8px)
+
+.nav-menu
+    position: absolute
+    display: none
+    background-color: white
+    width: 85.33vw
+    right: 6.93vw
+    border-radius: 15px
+    margin-top: 4rem
+    .nav_links
+        border-bottom: 1px #efeff1 solid
+        margin: 0 30px 0
+    ul
+        margin: 2.25rem auto 0
+        width: fit-content
+        text-align: center
+        list-style: none
+        li
+            margin: 0 auto 2.25rem
+            list-style: none
+        p
+            padding: 0.8125rem 0
+            a:hover
+                font-weight: $ubuntu-bold
+    summary
+        outline: none
+        cursor: pointer
+        margin: 0 auto 0
+        &::-webkit-details-marker
+            display: none
+        &::marker
+            color: transparent
+        &::after
+            content: url("../images/icon-arrow-dark.svg")
+            float: right
+            position: absolute
+            animation: rotate 400ms ease-out
+    details[open] summary
+        text-decoration: underline
+        width: 80px
+    details[open] summary::after
+        transform: rotate(180deg)
+    @keyframes rotate
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(180deg)
+    .nav-login
+        display: flex
+        flex-direction: column
+    div
+        flex-basis: 100%
+        text-align: center
+        margin-top: 1.156rem
+        .login
+            color: black
+            margin: 0 auto 0
+    button
+        flex-basis: 100%
+        margin-bottom: 1.875rem
+
+.nav_menu_box
+    margin-top: 1.5rem
+    background-color: #efeff1
+    width: 70vw
+    border-radius: 10px
+
+.red_button
+    padding: 0.53125rem
+    background: linear-gradient($intro-cta-gradient-1,$intro-cta-gradient-2) no-repeat
+    width: 8.5rem
+    color: $text
+    cursor: pointer
+    border-radius: 24px
+    border: none
+
+header
+    Padding-top: 12.6875rem
+    text-align: center
+    color: $text
+    margin: 0 2.5rem 0
+    p
+        margin: 1.6875rem 1.5rem 0
+    div
+        margin-top: 3.125rem
+    .header_button
+        padding: 1.125rem
+        margin-left: 0.875rem
+        cursor: pointer
+        border-radius: 24px
+    .start
+        color: $cta-text
+        background-color: white
+        border: none
+    .learn
+        color: $text
+        background-color: transparent
+        border: 2px $text solid
+
+.feature_1
+    margin-top: 6.5625rem
+    text-align: center
+    .feature_1_flex
+        display: flex
+        flex-direction: column-reverse
+        .feature_1_img
+            flex-basis: 100%
+            margin: 3.1875rem auto 0
+            img
+                width: 100vw
+
+.feature_text
+    flex-basis: 100%
+    margin-top: 3.25rem
+    h3
+        margin: 0 6rem 0
+        font-size: 1.25rem
+    p
+        margin: 1.5625rem 3.5rem 3.1875rem
+
+.feature_2
+    background: url('../images/bg-pattern-circles.svg') no-repeat center top,
+    linear-gradient(to bottom,$body-gradient-1,$body-gradient-2)
+    background-size: 155%
+    background-position: 50% -676%
+    width: 100%
+    height: 166.67vw
+    border-radius: 0 60px 0
+    .feature_2_img
+        margin-top: 17.0625rem
+        img
+            margin-top: -10.875rem
+            width: 100vw
+    .feature_2_text
+        color: $text
+        margin: 3.25rem auto
+        text-align: center
+        h1
+            font-size: 1.875rem
+        p
+            margin: 2.25rem 4rem 0
+
+.feature_3
+    margin-top: 5rem
+    .feature_3_flex
+        display: flex
+        flex-direction: column-reverse
+        .feature_3_img
+            img
+                width: 100vw
+
+footer
+    background-color: $footer-background
+    color: $text
+    text-align: center
+    border-radius: 0 60px 0 0
+    .footer_logo
+        padding: 4.75rem
+    .footer_links
+        display: flex
+        flex-direction: column
+        .footer_cols
+            margin-bottom: 3.625rem
+            .footer_menu
+                margin-top: 2.25rem
+                p
+                    margin-bottom: 1.25rem
+                    a
+                        color: $text
+                        text-decoration-color: white
+                        &:hover
+                            text-decoration: underline
+
+@media screen and ( min-width: 992px )
+    nav
+        .nav_logo
+            margin: 4.5rem 0 0 10.3125rem
+        .nav-bars-btn
+            display: none
+        .nav-menu
+            display: flex
+            flex-direction: row
+            background-color: transparent
+            align-items: center
+            .nav_links
+                margin-left: 3.875rem
+                border-bottom-color: transparent
+                color: $text
+                flex-basis: 70%
+
+                margin-top: -1rem
+                ul
+                    li
+                        float: left
+                        p
+                            width: 10.625rem
+            summary
+                margin-left:
+                width: 77px
+                &::after
+                    content: url("../images/icon-arrow-light.svg")
+            details
+                width: 80px
+                margin-right: 1.9375rem
+            details[open] summary
+                display: inline
+
+            .nav-login
+                flex-direction: row
+                justify-content: center
+                color: $text
+                flex-basis: 30%
+                margin-top: 0
+                float: right
+                div
+                    flex-basis: 50%
+                    .login
+                        color: $text
+                        .red_button
+
+    .nav_menu_box
+        width: 10.625rem
+    .intro-background
+        background-size: 100%
+    .feature_1
+        margin-bottom: 4rem
+        .feature_1_flex
+            flex-direction: row
+            .feature_1_inner_flex
+                flex-basis: 60%
+                margin-top: 3rem
+            .feature_1_img
+                flex-basis: 40%
+                overflow: inherit
+                img
+                    width: 45vw
+                    margin-right: -16rem
+                    margin-top: -10rem
+                    overflow: hidden
+    .feature_2
+        display: flex
+        flex-direction: row
+        height: 20rem
+        background-size: 60%
+        background-position: top -25rem left -10rem
+        .feature_2_text
+            p
+                margin-left: 10rem
+                margin-right: 10rem
+                text-align: left
+        .feature_2_img
+            img
+                width: 40vw
+                margin-top: -28rem
+                margin-left: 5rem
+    .feature_3
+        .feature_3_flex
+            flex-direction: row-reverse
+            .feature_3_img
+                flex-basis: 30%
+                img
+                    width: 50vw
+                    margin-left: -13rem
+    footer
+        display: flex
+        flex-direction: row
+        .footer_logo
+            flex-basis: 20%
+            padding: 71px 0 0 63px
+            text-align: left
+        .footer_links
+            flex-basis: 60%
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            .footer_cols
+                margin-top: 78px
+
+//     background-color: #0cbaba;
+// background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
