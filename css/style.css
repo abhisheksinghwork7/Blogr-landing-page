@@ -431,6 +431,8 @@ footer .footer_links .footer_cols .footer_menu p a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     color: white;
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
